@@ -3,21 +3,26 @@
   margin: 0;
 
 }
+li{
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body{
+  background-image: url(./assets/fondo3.avif)
+  
+}
 
 #NavBar{
   background-color: #B3DDC9;
   
 }
-#home{
-  
-  display: flex;
-  justify-content: space-between;
-  /* background-color: white;  */
-
-  }
 
  #footer{
    margin-bottom: 0;
    justify-content: center;
    background-color: #015A06;
+   position:relative;
+   bottom:0;
+   width:100%;
  }
