@@ -11,7 +11,9 @@ const Header = () => {
         <>
             <nav className='position-relative top-0 d-flex align-items-center justify-content-around z-40' id="NavBar">
                 <div className=' align-items-center align-middle '>
-                    <img src={logo} className="logoh rounded-pill" />
+                <Link to={ "/"} className=" text-black mt-3">
+                <img src={logo} className="logoh rounded-pill" />
+                        </Link> 
                 </div>
                 <ul className="nav list-unstyled text-decoration-none pb-3">
                     <li className="">

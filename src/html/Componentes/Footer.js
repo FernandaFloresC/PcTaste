@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../../assets/Logo.png";
 import "../../index.css"
+import { Link, useNavigate } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -11,10 +13,11 @@ const Footer = () => {
         <div className='row align-items-center justify-items-around m-2' id="">
           {/* <div className="col-12 row m-4"> */}
           <div className="col-6 justify-content-center d-grid">
-            {/* <img src="Logo.png" className=" rounded-3" width={250}/> */}
-            <img src={logo} className="rounded-pill logof" />
-            {/* <h3 className=" text-white text-decoration-none text-center"><a href="https://www.google.com/maps/place/Parque+O%60higgins/@-33.4617853,-70.6580664,17.5z/data=!4m9!1m2!2m1!1ssan+ignacio+de+loyola+1228!3m5!1s0x9662c5108712fba3:0xa36b653937706bf2!8m2!3d-33.4609788!4d-70.6568466!16s%2Fm%2F0gkj4d2?authuser=0" target='_blank'  rel='noopener noreferrer' className=" text-white text-decoration-none"> Metro Parque O'Higgins</a></h3> */}
-          </div>
+          <Link to={ "/"} className=" text-black mt-3">
+          <img src={logo} className="rounded-pill logof" />
+                        </Link> 
+            
+             </div>
           
           <div className="col-6 justify-content-center d-grid p-2">
             <h3 className=" font-semibold text-white ">Búscanos en nuestras redes</h3>

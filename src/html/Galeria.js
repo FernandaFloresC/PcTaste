@@ -12,19 +12,35 @@ import seis from "../assets/6.jpg"
 
 import PacmanLoader from "react-spinners/PacmanLoader";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const Galeria = () => {
 
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
+            toast.info("¡Hola! ¡No olvides que puedes hablarnos a nuestro whatsapp!");
+     
       setLoading(false)
     }, 3000)
   }, [])
 
   return (
     <>
-
+ {/* <ToastContainer
+position="top-right"
+autoClose={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+limit={1}
+draggable
+theme="colored"
+/> */}
       <Header />
 
       {loading ? (
@@ -44,7 +60,6 @@ const Galeria = () => {
               <h1 className=" card-header text-black shadow fw-bolder text-center py-4"> Galeria </h1>
               <div className="card-body justify-content-center p-5">
                 <section className="justify-content-center align-content-center m-5">
-                  {/* <img src='./assets/fondo.jpg' alt="fondo" className="w-100"/> */}
                   <h1 className=" fst-italic justify-content-center align-items-center d-flex"> Estos son algunos de los servicios que ofrecemos </h1>
                   <section className="row  justify-content-center align-middle text-center ">
                     <div className="my-5 col-lg-4 col-md-5 align-items-center"> <img src={uno} className="rounded w-75" /> <h2 className=" fst-italic justify-content-center align-items-center d-flex"> Con este cambio de disco duro se realiza una mejora en cuanto a la velocidad. </h2>

@@ -8,21 +8,38 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/switch.jpeg";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Home = () => {
 
     const [loading, setLoading] = useState(false)
     useEffect(() => {
         setLoading(true)
         setTimeout(() => {
+            toast.info("¡Hola! ¡No olvides que puedes hablarnos a nuestro whatsapp!");
             setLoading(false)
         }, 3000)
     }, [])
 
+    
 
     return (
-        <>
-            {/* <PacmanLoader color="#015A06" /> */}
 
+        <>
+          
+            {/* <ToastContainer
+position="top-right"
+autoClose={false}
+newestOnTop={false}
+closeOnClick
+limit={1}
+rtl={false}
+pauseOnFocusLoss
+draggable
+theme="colored"
+/> */}
             <Header />
 
             {loading ? (

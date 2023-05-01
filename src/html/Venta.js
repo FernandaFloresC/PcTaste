@@ -16,19 +16,35 @@ import cases from "../assets/cases.png"
 
 import PacmanLoader from "react-spinners/PacmanLoader";
 
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Venta = () => {
 
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
+      toast.info("¡Hola! ¡No olvides que puedes hablarnos a nuestro whatsapp!");
+
       setLoading(false)
     }, 3000)
   }, [])
 
   return (
     <>
-
+ {/* <ToastContainer
+position="top-right"
+autoClose={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+limit={1}
+pauseOnFocusLoss
+draggable
+theme="colored"
+/> */}
       <Header />
 
       {loading ? (
