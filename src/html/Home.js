@@ -1,57 +1,100 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import '../index.css';
-import NavBar from "./Componentes/Header";
+import Header from "./Componentes/Header";
 import Footer from "./Componentes/Footer";
+import Sidebar from "./Componentes/Sidebar";
+import { Link, useNavigate } from "react-router-dom";
 
-import c240 from "../assets/c240.png"
-import c240gb from "../assets/c240gb.png"
-import c480 from "../assets/c480.png"
-import c480gb from "../assets/c480gb.png"
-import wd240 from "../assets/wd-240gb.png"
-import wd480 from "../assets/wd-480gb.png"
-
-
+import logo from "../assets/switch.jpeg";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 const Home = () => {
 
+    const [loading, setLoading] = useState(false)
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 3000)
+    }, [])
+
+
     return (
         <>
-            <NavBar />
-            <div className="container-fluid ">
+            {/* <PacmanLoader color="#015A06" /> */}
 
-                <section className=" justify-content-center align-content-center home">
-                    {/* <img src='./assets/fondo.jpg' alt="fondo" className="w-100"/> */}
-                    <section className="card-header row gap-2 justify-content-center align-middle text-center ">
-                        <div className="card col-5 align-items-center">
-                        <p> Disco Duro Crucial 240GB</p>
-                            <img src={c240} className="rounded w-50" />
-                            <img src={c240gb} className="rounded-3 w-50" />
-                           
-                        </div>
-                        <div className="card col-5 align-items-center">
-                        <p> Disco Duro Crucial 480GB</p>
+            <Header />
 
-                            <img src={c480} className="rounded-3 w-50" />
-                            <img src={c480gb} className="rounded-3 w-50" />
-                        </div>
-                        <div className="card col-5 align-items-center">
-                        <p> Disco Duro Western Green 240GB</p>
-                            <img src={wd240} className="rounded-3 w-50" />
-                            
+            {loading ? (
+                <div className=" d-flex justify-content-center mt-5 pt-5 align-items-center">
+                    <PacmanLoader
+                        className='loading '
+                        color={'#015A06'}
+                        loading={loading}
+                        size={60}
+                        aria-label="Loading Spinner"
+                        data-testid="loader"
+                    />
+                </div>) : (
+
+                <div className="container-fluid" >
+                    <div className="container py-5 mb-5">
+                        <div className="d-flex card shadow-lg mb-5 ">
+                            <h1 className=" card-header bg-success bg-gradient text-white fw-bolder text-center py-4"> Nosotros somos PcTaste <br></br> Servicio Técnico de Computación </h1>
+                            <div className="card-body justify-content-center d-grid  py-5  home">
+                                <section className=" col-12  ">
+                                    <h1 className="text-decoration-underline fst-italic">Hacemos mantenciones y mejoras a Notebook y Computadores </h1>
+                                    <ul className=" fs-3">
+                                        <li> Limpieza de ventiladores. </li>
+                                        <li> Limpieza de teclado. </li>
+                                        <li> Limpieza completa. </li>
+                                        <li> Cambio de pasta termica. </li>
+                                        <li> Formateo con/sin respaldo de información. </li>
+                                        <li> Actualización de Sistemas Operativos. </li>
+                                        <li> Clonación de Disco Duro. </li>
+                                        <li> Instalación de piezas (RAM, Disco Duro HDD y SSD). </li>
+                                    </ul>
+                                </section>
+                                <section className="col-12 ">
+                                    <h1 className=" text-decoration-underline fst-italic">Hacemos mantenciones a PlayStation 4</h1>
+                                    <ul className=" fs-3">
+                                        <li> Cambio de puertos de carga en controles. </li>
+                                        <li> Limpieza a controles. </li>
+                                    </ul>
+                                </section>
+                                <section className="col-12 ">
+                                    <h1 className="text-decoration-underline fst-italic">Hacemos mantenciones a Nintendo Switch</h1>
+                                    <ul className=" fs-3 ">
+                                        <li> Cambio de mica. </li>
+                                        <li> Cambio de piezas en los controles. </li>
+                                        <li> Limpieza completa. </li>
+                                    </ul>
+                                </section>
+                                <section className=" col-12 ">
+                                    <h1 className="fst-italic text-decoration-underline ">  También... </h1>
+                                    <ul className=" fs-3">
+                                        <li> Te asesoramos para buscar piezas de Computadora o Notebook. </li>
+                                        <li> Te armamos un computador con tu presupuesto. </li>
+                                        <li> Hacemos presupuestos. </li>
+                                        <li> Vendemos productos, puedes revisar el catálogo
+                                            ➡ <Link to={"/Venta"} className=" text-white text-decoration-none" >
+                                                <span className=" text-decoration-none"> aquí. </span>
+                                            </Link> </li>
+                                    </ul>
+                                </section>
                             </div>
-                            <div className="card col-5 align-items-center">
-                            <p> Disco Duro Western Green 480GB</p>
-                            <img src={wd480} className="rounded-3 w-50" />
-                          
                         </div>
+                       
+                        {/* <div className="col-6 justify-content-center ">
+                                <img src={logo} className="w-25 rounded-circle" /></div> */}
+                    </div>
+                    <div className="p-5">
 
-                    </section>
+                        <Footer />
+                    </div>
 
-                </section>
-
-
-            </div>
-            <Footer />
+                </div>
+            )}
         </>
     )
 }

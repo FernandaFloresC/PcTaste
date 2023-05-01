@@ -5,40 +5,29 @@ import "../../index.css"
 const Footer = () => {
   return (
     <>
-      <div className=" container-fluid" id="footer">
-        {/* <div style={{ overflow: 'hidden', bottom: "0" }}  >
-          <svg
-            preserveAspectRatio="none"
-            viewBox="0 0 1200 120"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ fill: '#015A06', width: '136%', height: 272, transform: 'rotate(180deg) scaleX(-1)' }}
-          >
-            <path d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z" />
-
-          </svg> */}
-          <div className='row ' id="">
-            <div className="col-10 m-4">
-              <div className=" ">
-                {/* <img src="Logo.png" className=" rounded-3" width={250}/> */}
-                <img src={logo} className="rounded-pill w-25" />
+      <div className=" " id="footer">
 
 
-                <div className=" m-2">
-                  <h6 className=" font-semibold text-white">Búscanos en nuestras redes</h6>
-                  <ul className=" m-2">
-                    <li className=" text-white mr-2"><i class="fa-brands fa-facebook"><a href="https://www.facebook.com/PcTaste-103564074866807" className="text-white text-decoration-none" target="_blank" rel="noreferrer"> Facebook</a></i> </li>
-                    <li className="text-white mr-2"><i class="fa-brands fa-instagram"><a href="https://www.instagram.com/pctaste/" target="_blank" className="text-white text-decoration-none" rel="noreferrer"> Instagram</a></i> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-
-
+        <div className='row align-items-center justify-items-around m-2' id="">
+          {/* <div className="col-12 row m-4"> */}
+          <div className="col-6 justify-content-center d-grid">
+            {/* <img src="Logo.png" className=" rounded-3" width={250}/> */}
+            <img src={logo} className="rounded-pill logof" />
+            {/* <h3 className=" text-white text-decoration-none text-center"><a href="https://www.google.com/maps/place/Parque+O%60higgins/@-33.4617853,-70.6580664,17.5z/data=!4m9!1m2!2m1!1ssan+ignacio+de+loyola+1228!3m5!1s0x9662c5108712fba3:0xa36b653937706bf2!8m2!3d-33.4609788!4d-70.6568466!16s%2Fm%2F0gkj4d2?authuser=0" target='_blank'  rel='noopener noreferrer' className=" text-white text-decoration-none"> Metro Parque O'Higgins</a></h3> */}
           </div>
-        {/* </div> */}
+          
+          <div className="col-6 justify-content-center d-grid p-2">
+            <h3 className=" font-semibold text-white ">Búscanos en nuestras redes</h3>
+            <ul className="fs-4 m-2 list-unstyled text-center ">
+              <li className=" text-white "><i class="fa-brands fa-facebook"><a href="https://www.facebook.com/PcTaste-103564074866807" className="text-white text-decoration-none" target="_blank" rel="noreferrer"><span> Facebook</span> </a></i> </li>
+              <li className="text-white"><i class="fa-brands fa-instagram"><a href="https://www.instagram.com/pctaste/" target="_blank" className="text-white text-decoration-none" rel="noreferrer"> <span> Instagram</span></a></i> </li>
+              <li className="text-white"> <i class="fa-brands fa-whatsapp text-white fs-3"><a href="https://api.whatsapp.com/send?phone=56961092981&text=hola,%20¿qué%20tal%20estás?" className=" text-white fs-4 text-decoration-none"> <span> Whatsapp</span></a></i> </li>
+            </ul>
+          </div>
+         
+        </div>
       </div>
-
+      {/* </div> */}
     </>
   );
 }

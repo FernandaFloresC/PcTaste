@@ -1,28 +1,101 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+body {
+  margin: 0;
+  background: #ddd6d696;
+  font-family: 'Roboto Slab', serif;
+}
 *{
   margin: 0;
+  font-family: 'Roboto Slab', serif;
+}
+.container-fluid {
+  min-height: 100vh; /*importante*/
+  position: relative; /*importante*/
+}
 
-}
-li{
-  list-style-type: none;
-  text-decoration: none;
-}
 
-body{
-  background-image: url(./assets/fondo3.avif)
-  
-}
+/* .loading {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+} */
+
+
 
 #NavBar{
   background-color: #B3DDC9;
-  
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+/* .h:hover {
+  background-color: red;
+} */
+.logoh{
+  width: 70% ;
 }
 
  #footer{
-   margin-bottom: 0;
-   justify-content: center;
+ height: auto; 
+  width:100%; 
+  position:absolute; 
+  bottom:0; 
+  left:0; 
    background-color: #015A06;
-   position:relative;
-   bottom:0;
-   width:100%;
+   /* width:100%; */
  }
+ .logof{
+  width: 70% ;
+}
+.home{
+  background-image: linear-gradient(to bottom, rgba(179, 221, 201, 0.95), rgba(115, 129, 177, 0.95)),url('./assets/fondo1.jpg');
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+}
+
+
+ /* .wsp:hover {
+  color: red;
+} */
+
+
+/* .loader{
+  font-size: 48px;
+  color: #FFF;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  position: relative;
+}
+.loader:after{
+  content: 'PcTaste';
+  position: relative;
+  z-index: 5;
+}
+.loader:before{
+  content: '';
+  height: 6px;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background: linear-gradient(#015A06 100%, transparent 0) no-repeat;
+  background-size: 0% auto;
+  animation: 10s lineGrow linear infinite;
+}
+
+@keyframes lineGrow {to {  background-size: 100% auto}} */
